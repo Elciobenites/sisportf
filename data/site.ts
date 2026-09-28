@@ -95,7 +95,15 @@ export const about = {
   ],
 } as const;
 
-export const education = [
+export type EducationStatus = "concluido" | "em-andamento";
+
+export type EducationItem = {
+  title: string;
+  institution: string;
+  status: EducationStatus;
+};
+
+export const education: EducationItem[] = [
   { title: "Ciência de Dados", institution: "", status: "concluido" },
   { title: "MBA Data Driven", institution: "", status: "concluido" },
   {
@@ -124,4 +132,4 @@ export const education = [
     institution: "",
     status: "concluido",
   },
-] as const;
+];
