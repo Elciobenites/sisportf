@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; font-family: "Segoe UI", Georgia, serif; }
+    body { display: grid; grid-template-columns: 1.45fr .9fr; background: #fff; }
+    .banner { background: #fff; display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .banner img { width: 100%; height: 100%; object-fit: contain; }
+    .form {
+      display: flex; flex-direction: column; justify-content: center;
+      border-left: 1px solid #f1f5f9; padding: 48px 56px;
+      box-shadow: -12px 0 40px rgba(15,23,42,.08);
+    }
+    .badge {
+      width: 48px; height: 48px; border-radius: 12px; background: #1a3b5d;
+      display: flex; align-items: center; justify-content: center; color: #fff; font-size: 22px; margin-bottom: 14px;
+    }
+    .kicker { margin: 0; color: #2f9e44; font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+    h1 { margin: 6px 0 8px; color: #1a3b5d; font-size: 34px; font-weight: 800; }
+    .lead { margin: 0 0 20px; color: #475569; font-size: 14px; line-height: 1.5; }
+    .lock {
+      display: flex; gap: 12px; align-items: flex-start; padding: 14px;
+      border: 1px solid #c5e4ff; background: #f0f7ff; border-radius: 16px; margin-bottom: 22px;
+    }
+    .lock-ico { width: 36px; height: 36px; border-radius: 999px; background: #1a3b5d; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+    .lock b { display: block; color: #1a3b5d; font-size: 14px; }
+    .lock span { color: #475569; font-size: 12px; }
+    label { display: block; color: #1a3b5d; font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+    input {
+      width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; margin-bottom: 14px;
+      border-radius: 12px; border: 1px solid #e2e8f0; background: #f4f8fc; font-size: 15px;
+    }
+    .btn { width: 100%; height: 44px; border: 0; border-radius: 12px; background: #1a3b5d; color: #fff; font-size: 16px; font-weight: 600; }
+    .foot { margin: 28px 0 0; text-align: center; font-size: 12px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <aside class="banner"><img src="assets/pcpi-banner.jpeg" alt="" /></aside>
+  <section class="form">
+    <div class="badge">🎓</div>
+    <p class="kicker">Tecnologia, Inovação e Práticas Pedagógicas</p>
+    <h1>Área Administrativa</h1>
+    <p class="lead">Acesse o ambiente do pesquisador para acompanhar respostas, indicadores, gráficos e exportações da pesquisa.</p>
+    <div class="lock">
+      <div class="lock-ico">🔒</div>
+      <div>
+        <b>Acesso restrito</b>
+        <span>Exclusivo para o pesquisador responsável. Os participantes acessam apenas o questionário.</span>
+      </div>
+    </div>
+    <label>Usuário</label>
+    <input placeholder="Digite seu usuário" />
+    <label>Senha</label>
+    <input type="password" placeholder="Digite sua senha" />
+    <button class="btn" type="button">Entrar</button>
+    <p class="foot">Sistema de Pesquisa Acadêmica</p>
+  </section>
+</body>
+</html>

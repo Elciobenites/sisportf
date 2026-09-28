@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif; }
+    body {
+      background: #cfe6f5 url("assets/gersau-fundo.png") left bottom / cover no-repeat;
+    }
+    .stage {
+      width: 1600px; height: 900px;
+      display: flex; align-items: center; justify-content: flex-end;
+      padding: 32px 88px 48px; box-sizing: border-box;
+    }
+    .card {
+      width: 380px; background: #fff; border-radius: 18px;
+      padding: 26px 27px 22px;
+      box-shadow: 0 22px 48px rgba(8,32,64,.28);
+    }
+    .card img { display: block; width: 280px; max-width: 100%; height: auto; margin: 0 auto 17px; }
+    h2 { margin: 0; color: #1565c0; font-size: 27px; font-weight: 800; letter-spacing: -.03em; }
+    .sub { margin: 4px 0 20px; color: #8a97a6; font-size: 15px; }
+    label { display: block; font-size: 15px; font-weight: 700; color: #334155; margin: 0 0 6px; }
+    input {
+      width: 100%; box-sizing: border-box; border: 1px solid #d7dee8; border-radius: 8px;
+      padding: 12px 13px; font-size: 15px; margin-bottom: 15px; background: #fff; color: #0f172a;
+    }
+    .btn {
+      width: 100%; border: 0; border-radius: 8px; background: #1e88e5; color: #fff;
+      font-weight: 700; font-size: 16px; padding: 13px 16px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn svg { width: 20px; height: 20px; fill: currentColor; }
+    .foot { margin: 18px 0 0; text-align: center; font-size: 12px; color: #90a0b0; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="card">
+      <img src="assets/gersau-mod.png" alt="" />
+      <h2>Bem-vindo</h2>
+      <p class="sub">Faça login para acessar o sistema</p>
+      <label>Usuário</label>
+      <input placeholder="Digite seu usuário" />
+      <label>Senha</label>
+      <input type="password" placeholder="Digite sua senha" />
+      <button class="btn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5v3H3v4h7v3zm9-14H11c-1.1 0-2 .9-2 2v3h2V5h8v14h-8v-3H9v3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+        Entrar
+      </button>
+      <p class="foot">Superintendência Gestão do Trabalho em Saúde</p>
+    </div>
+  </div>
+</body>
+</html>

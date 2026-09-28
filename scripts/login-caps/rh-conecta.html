@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; color: #0b2c4a; }
+    body { background: url("assets/rh-fundo.png") center / cover no-repeat; }
+    .overlay {
+      width: 1600px; height: 900px; display: grid; grid-template-columns: 1.2fr .8fr;
+      padding: 40px; box-sizing: border-box;
+    }
+    .card {
+      justify-self: end; align-self: center; width: 400px;
+      background: rgba(255,255,255,.94); border-radius: 22px; padding: 32px 28px;
+      border: 1px solid rgba(255,255,255,.7);
+      box-shadow: 0 28px 56px rgba(5,20,45,.32);
+    }
+    h2 { margin: 0 0 6px; color: #0b3d6e; font-size: 28px; letter-spacing: -.02em; }
+    .sub { color: #5b6b7c; margin: 0 0 24px; font-size: 15px; line-height: 1.45; }
+    label { display: block; font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+    input {
+      width: 100%; box-sizing: border-box; padding: 11px 12px; margin-bottom: 16px;
+      border: 1px solid #d5e0ea; border-radius: 8px; font-size: 15px;
+    }
+    .btn {
+      width: 100%; border: 0; border-radius: 8px; background: #0b3d6e; color: #fff;
+      font-weight: 700; font-size: 16px; padding: 13px;
+    }
+    .note { margin: 22px 0 0; text-align: center; font-size: 12px; color: #6b7c8d; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div></div>
+    <div class="card">
+      <h2>Bem-vindo</h2>
+      <p class="sub">Entre com seu usuário e sua senha para acessar o portal.</p>
+      <label>Usuário</label>
+      <input placeholder="Digite seu usuário" />
+      <label>Senha</label>
+      <input type="password" placeholder="Digite sua senha" />
+      <button class="btn" type="button">Entrar</button>
+      <p class="note">Comunicação · Atendimento · Informação · Confiança</p>
+    </div>
+  </div>
+</body>
+</html>

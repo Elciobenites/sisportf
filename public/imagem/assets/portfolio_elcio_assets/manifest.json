@@ -1,0 +1,13 @@
+{
+  "hero": "hero_dados_sistemas.png",
+  "hero_closeup": "hero_dashboard_notebook.png",
+  "projects": {
+    "rh-digital": "projeto_rh_digital.png",
+    "frequencia": "projeto_frequencia.png",
+    "piso-enfermagem": "projeto_piso_enfermagem.png",
+    "people-analytics": "projeto_people_analytics.png",
+    "geolocalizacao": "projeto_geolocalizacao.png",
+    "rh-conecta": "projeto_rh_conecta.png"
+  },
+  "contact_banner": "banner_contato.png"
+}

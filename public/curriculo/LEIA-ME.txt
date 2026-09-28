@@ -1,0 +1,7 @@
+Substitua este arquivo pelo currículo em PDF, mantendo o nome:
+
+Curriculo_Elcio_Benites.pdf
+
+O botão "Baixar currículo" aponta para:
+
+/curriculo/Curriculo_Elcio_Benites.pdf

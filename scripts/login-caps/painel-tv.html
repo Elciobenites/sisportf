@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; background: #020617; }
+    .mesh {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(700px 420px at 18% 20%, rgba(34,211,238,.18), transparent 60%),
+        radial-gradient(640px 400px at 82% 78%, rgba(168,85,247,.16), transparent 62%),
+        #020617;
+    }
+    .grid {
+      position: absolute; inset: 0; opacity: .22;
+      background-image: linear-gradient(rgba(148,163,184,.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,.12) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .card {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      text-align: center; padding: 48px 64px; border-radius: 24px;
+      background: #0b1220; border: 1px solid rgba(103,232,249,.22);
+      box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    }
+    .logo {
+      width: 72px; height: 72px; margin: 0 auto 8px; border-radius: 18px; background: #0f172a;
+      display: flex; align-items: center; justify-content: center;
+    }
+    h1 {
+      margin: 16px 0 0; font-size: 36px; font-weight: 800; letter-spacing: -.03em;
+      background: linear-gradient(135deg, #22d3ee, #c084fc);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .tag { margin: 8px 0 0; font-size: 13px; letter-spacing: .35em; text-transform: uppercase; color: #94a3b8; }
+    .bar { width: 220px; height: 4px; background: #1e293b; border-radius: 99px; margin: 24px auto 12px; overflow: hidden; }
+    .fill { width: 55%; height: 100%; background: linear-gradient(90deg, #22d3ee, #a855f7); border-radius: 99px; }
+    .status { margin: 0; font-size: 15px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <div class="mesh"></div>
+  <div class="grid"></div>
+  <div class="card">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#22d3ee"/>
+            <stop offset="100%" stop-color="#c084fc"/>
+          </linearGradient>
+        </defs>
+        <rect width="48" height="48" rx="14" fill="#0f172a"/>
+        <path d="M8 34 L16 18 L24 26 L32 12 L40 22" stroke="url(#lg)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1>Folha Intelligence</h1>
+    <p class="tag">Painel Live · TV</p>
+    <div class="bar"><div class="fill"></div></div>
+    <p class="status">Iniciando módulo de dados…</p>
+  </div>
+</body>
+</html>

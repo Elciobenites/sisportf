@@ -1,0 +1,8 @@
+O RH Digital foi retirado da listagem porque a imagem anterior não representava o sistema.
+
+Quando a screenshot correta estiver pronta, coloque:
+
+  cover.png
+  gallery-01.png
+
+Depois o projeto pode ser cadastrado de novo em data/projects.ts.

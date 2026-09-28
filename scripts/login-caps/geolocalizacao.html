@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { margin: 0; width: 1600px; height: 900px; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; background: #071424; }
+    body {
+      background:
+        radial-gradient(900px 520px at 20% 80%, rgba(56,189,248,.16), transparent 60%),
+        radial-gradient(700px 420px at 80% 20%, rgba(37,99,235,.22), transparent 55%),
+        #071424;
+    }
+    svg.map { position: absolute; inset: 0; width: 1600px; height: 900px; }
+    .card {
+      position: absolute; left: 72px; top: 72px; width: 460px;
+      background: rgba(16,28,48,.92); border: 1px solid #24344d; border-radius: 24px; padding: 28px 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+    h1 { margin: 0 0 8px; color: #f3f6fb; font-size: 30px; font-weight: 700; }
+    p { margin: 0; color: #9aadc2; font-size: 17px; line-height: 1.45; }
+    .chip {
+      display: inline-block; margin-top: 18px; padding: 8px 12px; border-radius: 999px;
+      background: rgba(56,189,248,.12); color: #67e8f9; font-size: 13px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <svg class="map" viewBox="0 0 1600 900">
+    <path d="M180 720 C 360 520, 520 610, 740 430 S 1100 280, 1420 360" fill="none" stroke="#3d7bff" stroke-opacity=".28" stroke-width="2"/>
+    <path d="M220 280 C 480 360, 700 220, 980 340 S 1280 520, 1480 480" fill="none" stroke="#3d7bff" stroke-opacity=".28" stroke-width="2"/>
+    <circle cx="420" cy="560" r="22" fill="#60a5fa" fill-opacity=".35"/>
+    <circle cx="740" cy="430" r="26" fill="#60a5fa" fill-opacity=".35"/>
+    <circle cx="1180" cy="510" r="24" fill="#60a5fa" fill-opacity=".35"/>
+    <circle cx="420" cy="560" r="8" fill="#67e8f9"/>
+    <circle cx="740" cy="430" r="10" fill="#67e8f9"/>
+    <circle cx="980" cy="340" r="8" fill="#67e8f9"/>
+    <circle cx="1180" cy="510" r="9" fill="#67e8f9"/>
+    <circle cx="1320" cy="390" r="7" fill="#67e8f9"/>
+  </svg>
+  <div class="card">
+    <h1>Geolocalização de Unidades</h1>
+    <p>Tratamento de endereços e preparação das coordenadas para análise espacial.</p>
+    <span class="chip">Tela inicial do módulo</span>
+  </div>
+</body>
+</html>

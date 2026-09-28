@@ -1,0 +1,8 @@
+Substitua as imagens provisórias pelos screenshots reais e anonimizados.
+
+Cada projeto usa:
+
+  public/projects/[slug]/cover.png
+  public/projects/[slug]/gallery-01.png
+
+Você pode adicionar mais arquivos na galeria e cadastrá-los em data/projects.ts.
