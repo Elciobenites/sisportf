@@ -59,11 +59,12 @@ export const technologyCategories: TechnologyCategory[] = [
     id: "produtividade",
     title: "Produtividade",
     items: [
-      "IA para análise",
-      "IA para prototipação",
-      "IA para documentação",
-      "IA para produtividade",
+      "Análise exploratória",
+      "Prototipação de soluções",
+      "Documentação técnica",
+      "Automação de rotinas",
       "Apoio ao desenvolvimento",
     ],
+    note: "Ferramentas de IA entram como apoio. A responsabilidade pelas soluções permanece no entendimento do negócio, na arquitetura, no SQL e no desenvolvimento.",
   },
 ];
