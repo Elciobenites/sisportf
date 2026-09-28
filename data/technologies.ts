@@ -55,17 +55,4 @@ export const technologyCategories: TechnologyCategory[] = [
       "Inteligência Artificial",
     ],
   },
-  {
-    id: "produtividade",
-    title: "Produtividade",
-    items: [
-      "IA para análise",
-      "IA para prototipação",
-      "IA para documentação",
-      "IA para produtividade",
-      "Apoio ao desenvolvimento",
-      "Cursor",
-    ],
-    note: "Ferramentas de IA, incluindo o Cursor, entram como apoio à análise, prototipação, documentação e produtividade. A responsabilidade pelas soluções permanece no entendimento do negócio, na arquitetura, no SQL e no desenvolvimento.",
-  },
 ];
