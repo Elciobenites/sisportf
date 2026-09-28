@@ -55,4 +55,15 @@ export const technologyCategories: TechnologyCategory[] = [
       "Inteligência Artificial",
     ],
   },
+  {
+    id: "produtividade",
+    title: "Produtividade",
+    items: [
+      "IA para análise",
+      "IA para prototipação",
+      "IA para documentação",
+      "IA para produtividade",
+      "Apoio ao desenvolvimento",
+    ],
+  },
 ];
