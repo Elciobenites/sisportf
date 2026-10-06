@@ -1,3 +1,4 @@
+import { BiModels } from "@/components/bi/BiModels";
 import { About } from "@/components/home/About";
 import { Contact } from "@/components/home/Contact";
 import { Education } from "@/components/home/Education";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <StackBar />
       <FeaturedProjects />
+      <BiModels />
       <Impact />
       <OtherProjects />
       <Technologies />

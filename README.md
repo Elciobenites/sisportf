@@ -35,6 +35,16 @@ Edite os arquivos da pasta `data`:
 
 Não é necessário alterar os componentes da interface para mudar textos.
 
+## Modelos de BI
+
+Os painéis interativos ficam em:
+
+- `data/bi-models.ts` — textos, indicadores e séries ilustrativas
+- `/bi` — galeria
+- `/bi/[slug]` — dashboard interativo
+
+Os números são fictícios. Não substitua por dados reais de sistemas, pessoas ou instituições.
+
 ## Como cadastrar um novo projeto
 
 1. Abra `data/projects.ts`.

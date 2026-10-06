@@ -31,6 +31,7 @@ export const siteConfig = {
   navigation: [
     { label: "Início", href: "/#inicio" },
     { label: "Projetos", href: "/#projetos" },
+    { label: "BI", href: "/bi" },
     { label: "Tecnologias", href: "/#tecnologias" },
     { label: "Sobre", href: "/#sobre" },
     { label: "Contato", href: "/#contato" },
