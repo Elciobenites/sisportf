@@ -636,7 +636,7 @@ export const projects: Project[] = [
     imagens: {
       capa: {
         src: "/projects/sind/login.jpg",
-        alt: "Tela de acesso do SIND, sem dados pessoais",
+        alt: "Tela inicial moderna do SIND, com banner institucional e acesso, sem dados pessoais",
         placeholder: false,
         fit: "cover",
       },
@@ -644,6 +644,57 @@ export const projects: Project[] = [
         {
           src: "/projects/sind/gallery-01.png",
           alt: "Identidade visual do SIND",
+          placeholder: false,
+        },
+      ],
+    },
+  },
+  {
+    id: "sisdap",
+    slug: "sisdap",
+    nome: "SISDAP",
+    icone: "users",
+    resumo:
+      "Módulo de administração de pessoal com consulta de servidores, movimentações, documentos, afastamentos, vacância, exonerações, declarações e relatórios.",
+    desafio:
+      "As rotinas de administração de pessoal ficam espalhadas entre cadastro, documentos, afastamentos e vacância. Sem um módulo próprio, consultar vínculos, acompanhar tramitações e gerar documentos perde consistência.",
+    solucao:
+      "Foi desenvolvido um sistema web em Node.js com SQL Server, autenticação por perfil, consulta de servidores, registro de movimentações e documentos, acompanhamento de afastamentos e vacância, declarações e exportação em Excel e PDF. O cadastro oficial de servidores permanece somente leitura.",
+    participacao: [
+      "Entendimento do problema",
+      "Levantamento das regras de negócio",
+      "Modelagem de dados",
+      "SQL",
+      "Desenvolvimento",
+      "Validação",
+    ],
+    tecnologias: ["Node.js", "JavaScript", "SQL Server", "Excel", "PDF"],
+    arquitetura: [
+      { label: "Usuário" },
+      { label: "Aplicação web" },
+      { label: "API / Backend" },
+      { label: "SQL Server" },
+      { label: "Documentos e relatórios" },
+      { label: "Gestão de pessoal" },
+    ],
+    resultados: {
+      qualitativos: [
+        "Centralização das rotinas de administração de pessoal em um sistema web.",
+        "Apoio a consultas, documentos, vacância, declarações e exportação em Excel e PDF, sem alterar o cadastro oficial de servidores.",
+      ],
+      quantitativos: [],
+    },
+    imagens: {
+      capa: {
+        src: "/projects/sisdap/login.jpg",
+        alt: "Tela de acesso do SISDAP, sem dados pessoais",
+        placeholder: false,
+        fit: "cover",
+      },
+      galeria: [
+        {
+          src: "/projects/sisdap/gallery-01.png",
+          alt: "Identidade visual do SISDAP",
           placeholder: false,
         },
       ],

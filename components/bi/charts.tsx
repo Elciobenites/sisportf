@@ -3,6 +3,24 @@ type SparklineProps = {
   color: string;
 };
 
+export function HeatStrip({ values, color }: SparklineProps) {
+  const max = Math.max(...values, 1);
+  const min = Math.min(...values, max);
+  const span = max - min || 1;
+
+  return (
+    <div className="flex h-8 gap-[3px]" aria-hidden="true">
+      {values.map((value, index) => (
+        <span
+          key={`${value}-${index}`}
+          className="h-full flex-1 rounded-[3px]"
+          style={{ background: color, opacity: 0.16 + ((value - min) / span) * 0.84 }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function Sparkline({ values, color }: SparklineProps) {
   const min = Math.min(...values);
   const max = Math.max(...values);

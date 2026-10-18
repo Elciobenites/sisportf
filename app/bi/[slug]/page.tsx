@@ -48,12 +48,21 @@ export default async function BiDashboardPage({ params }: BiPageProps) {
         </p>
         <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <span
+                className="rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em]"
+                style={{ color: model.accent, background: `${model.accent}1f` }}
+              >
+                {model.category}
+              </span>
+              <span className="text-sm text-mist">{model.audience}</span>
+            </div>
             <h1 className="font-display text-4xl font-semibold tracking-tight text-snow sm:text-5xl">
               {model.nome}
             </h1>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-mist">{model.contexto}</p>
           </div>
-          <ButtonLink href="/bi" variant="secondary">
+          <ButtonLink href="/bi" variant="secondary" className="self-start lg:self-auto">
             Ver todos os modelos
           </ButtonLink>
         </div>

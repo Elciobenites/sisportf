@@ -204,28 +204,45 @@ def geolocalizacao():
 
 
 def sind():
-    canvas = Image.new("RGB", (W, H), "#020617")
+    canvas = paste_card(
+        cover(Path(r"C:\BKP\SIND\frontend\public\imagens\banner_login.png")),
+        (1090, 150, 1535, 770),
+        18,
+        fill=(255, 255, 255, 245),
+    )
     draw = ImageDraw.Draw(canvas)
-    draw.rectangle((800, 0, W, H), fill="#f1f5f9")
-    logo = Image.open(Path(r"C:\BKP\SIND\frontend\public\imagens\sind_logo.png")).convert("RGBA")
-    max_w, max_h = 680, 640
-    scale = min(max_w / logo.width, max_h / logo.height)
-    logo = logo.resize((int(logo.width * scale), int(logo.height * scale)), Image.Resampling.LANCZOS)
-    canvas.paste(logo, ((800 - logo.width) // 2, (H - logo.height) // 2), logo)
-    canvas = paste_card(canvas, (900, 140, 1510, 760), 22, fill=(255, 255, 255, 255))
-    draw = ImageDraw.Draw(canvas)
-    draw.text((950, 190), "Acesse o sistema", fill="#1e293b", font=font(30, True))
-    draw.text((950, 238), "Informe seu usuário e senha", fill="#64748b", font=font(16))
-    draw.text((950, 262), "para continuar.", fill="#64748b", font=font(16))
-    field(draw, 950, 320, 510, "Usuário", "Digite seu usuário")
-    field(draw, 950, 440, 510, "Senha", "Digite sua senha")
-    button(draw, (950, 570, 1460, 636), "Entrar", "#2563eb", 10)
-    draw.text((1008, 690), "Acesso registrado para fins de auditoria.", fill="#94a3b8", font=font(14))
+    draw.text((1124, 186), "Acesse o sistema", fill="#1e293b", font=font(28, True))
+    draw.text((1124, 230), "Informe seu usuário e senha", fill="#64748b", font=font(15))
+    draw.text((1124, 252), "para continuar.", fill="#64748b", font=font(15))
+    field(draw, 1124, 310, 380, "Usuário", "Usuário")
+    field(draw, 1124, 430, 380, "Senha", "Senha")
+    button(draw, (1124, 560, 1504, 618), "Entrar", "#2563eb", 10)
+    draw.text((1140, 650), "Acesso registrado para fins de auditoria.", fill="#94a3b8", font=font(12))
     save_jpg(canvas, PUBLIC / "sind" / "login.jpg")
     gallery = Path(r"C:\BKP\SIND\frontend\public\imagens\sind_logo.png")
     dest = PUBLIC / "sind" / "gallery-01.png"
     dest.parent.mkdir(parents=True, exist_ok=True)
     Image.open(gallery).convert("RGBA").save(dest, "PNG")
+    print(f"{dest.name} {dest.stat().st_size // 1024}KB -> {dest}")
+
+
+def sisdap():
+    canvas = paste_card(cover(Path(r"D:\SISDAP\imagem\Tela_fundo_original.png")), (1140, 90, 1548, 810), 16)
+    draw = ImageDraw.Draw(canvas)
+    logo = Image.open(Path(r"D:\SISDAP\imagem\Logo SESAU DAP em Azul Gradiente.png")).convert("RGBA")
+    logo.thumbnail((340, 120), Image.Resampling.LANCZOS)
+    canvas.paste(logo, (1174, 118), logo)
+    draw.text((1174, 260), "Bem-vindo", fill="#16325c", font=font(30, True))
+    draw.text((1174, 304), "Entre com seu usuário e senha", fill="#6b778c", font=font(16))
+    draw.text((1174, 326), "para acessar o sistema.", fill="#6b778c", font=font(16))
+    field(draw, 1174, 370, 336, "Usuário", "Digite seu usuário")
+    field(draw, 1174, 480, 336, "Senha", "Digite sua senha")
+    button(draw, (1174, 610, 1510, 668), "Entrar", "#2f7fe0")
+    draw.text((1190, 700), "Acesso ao módulo de administração de pessoal.", fill="#8b97a8", font=font(13))
+    save_jpg(canvas, PUBLIC / "sisdap" / "login.jpg")
+    dest = PUBLIC / "sisdap" / "gallery-01.png"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    Image.open(Path(r"D:\SISDAP\imagem\Logo SESAU DAP em Azul Gradiente.png")).convert("RGBA").save(dest, "PNG")
     print(f"{dest.name} {dest.stat().st_size // 1024}KB -> {dest}")
 
 
@@ -238,4 +255,5 @@ if __name__ == "__main__":
     painel_tv()
     geolocalizacao()
     sind()
+    sisdap()
     print("ok")
