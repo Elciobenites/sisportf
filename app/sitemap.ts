@@ -13,10 +13,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/projetos`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/bi`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/tecnologias`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/sobre`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/contato`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.65,
     },
     ...getProjectSlugs().map((slug) => ({
       url: `${baseUrl}/projetos/${slug}`,

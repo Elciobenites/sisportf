@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BiGallery } from "@/components/bi/BiGallery";
 import { Container } from "@/components/ui/Container";
 import { getBiModels } from "@/data/bi-models";
@@ -17,9 +18,9 @@ export default function BiGalleryPage() {
     <article className="pb-20 pt-10 sm:pt-14">
       <Container>
         <p className="text-sm text-mist">
-          <a href="/#modelos-bi" className="focus-ring rounded-md hover:text-snow">
+          <Link href="/" className="focus-ring rounded-md hover:text-snow">
             Início
-          </a>
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-ink">Modelos de BI</span>
         </p>

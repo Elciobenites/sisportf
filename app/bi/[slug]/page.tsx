@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DashboardView } from "@/components/bi/DashboardView";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -40,9 +41,9 @@ export default async function BiDashboardPage({ params }: BiPageProps) {
     <article className="pb-20 pt-10 sm:pt-14">
       <Container>
         <p className="text-sm text-mist">
-          <a href="/bi" className="focus-ring rounded-md hover:text-snow">
+          <Link href="/bi" className="focus-ring rounded-md hover:text-snow">
             Modelos de BI
-          </a>
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-ink">{model.nome}</span>
         </p>

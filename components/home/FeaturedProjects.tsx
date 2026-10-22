@@ -1,10 +1,15 @@
+import Link from "next/link";
 import { ArrowIcon } from "@/components/icons/UiIcons";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { getFeaturedProjects } from "@/data/projects";
 
-export function FeaturedProjects() {
+type FeaturedProjectsProps = {
+  showAllLink?: boolean;
+};
+
+export function FeaturedProjects({ showAllLink = false }: FeaturedProjectsProps) {
   const featured = getFeaturedProjects();
 
   return (
@@ -19,13 +24,15 @@ export function FeaturedProjects() {
               Soluções desenvolvidas com foco em dados, processos e pessoas.
             </p>
           </div>
-          <a
-            href="#outros-projetos"
-            className="focus-ring inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-snow hover:text-blue-soft"
-          >
-            Ver todos os projetos
-            <ArrowIcon className="h-4 w-4" />
-          </a>
+          {showAllLink ? (
+            <Link
+              href="/projetos"
+              className="focus-ring inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-snow hover:text-blue-soft"
+            >
+              Ver todos os projetos
+              <ArrowIcon className="h-4 w-4" />
+            </Link>
+          ) : null}
         </div>
         <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
           {featured.map((project, index) => (

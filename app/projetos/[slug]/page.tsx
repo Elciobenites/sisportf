@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { ArchitectureFlow } from "@/components/projects/ArchitectureFlow";
@@ -49,9 +50,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <article className="pb-20 pt-10 sm:pt-14">
       <Container>
         <p className="text-sm text-mist">
-          <a href="/#projetos" className="focus-ring rounded-md hover:text-snow">
+          <Link href="/projetos" className="focus-ring rounded-md hover:text-snow">
             Projetos
-          </a>
+          </Link>
           <span className="mx-2">/</span>
           <span className="text-ink">{project.nome}</span>
         </p>
@@ -171,7 +172,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
               <div className="mt-6">
-                <ButtonLink href="/#contato" className="w-full">
+                <ButtonLink href="/contato" className="w-full">
                   Vamos Conversar
                 </ButtonLink>
               </div>

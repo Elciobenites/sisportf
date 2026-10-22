@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/icons/UiIcons";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/data/site";
@@ -25,9 +26,9 @@ export function Footer() {
 
           <nav className="flex flex-wrap gap-5 text-sm text-mist" aria-label="Rodapé">
             {siteConfig.navigation.map((item) => (
-              <a key={item.href} href={item.href} className="focus-ring rounded-md hover:text-snow">
+              <Link key={item.href} href={item.href} className="focus-ring rounded-md hover:text-snow">
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

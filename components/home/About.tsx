@@ -3,12 +3,16 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { about } from "@/data/site";
 
-export function About() {
+type AboutProps = {
+  hideHeading?: boolean;
+};
+
+export function About({ hideHeading = false }: AboutProps) {
   return (
     <section id="sobre" className="scroll-mt-24 py-16 sm:py-20">
       <Container>
-        <SectionHeading title={about.title} />
-        <div className="mt-6 max-w-4xl space-y-5 text-base leading-7 text-mist">
+        {hideHeading ? null : <SectionHeading title={about.title} />}
+        <div className={hideHeading ? "max-w-4xl space-y-5 text-base leading-7 text-mist" : "mt-6 max-w-4xl space-y-5 text-base leading-7 text-mist"}>
           {about.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

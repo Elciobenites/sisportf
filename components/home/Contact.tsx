@@ -22,7 +22,7 @@ export function Contact() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <ButtonLink
-                  href={email ? `mailto:${email}` : linkedin || github || "/#projetos"}
+                  href={email ? `mailto:${email}` : linkedin || github || "/projetos"}
                   external={Boolean(email || linkedin || github)}
                 >
                   Falar comigo

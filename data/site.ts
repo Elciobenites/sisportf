@@ -29,12 +29,12 @@ export const siteConfig = {
     cvHref: "/curriculo/Curriculo_Elcio_Benites.pdf",
   },
   navigation: [
-    { label: "Início", href: "/#inicio" },
-    { label: "Projetos", href: "/#projetos" },
+    { label: "Início", href: "/" },
+    { label: "Projetos", href: "/projetos" },
     { label: "BI", href: "/bi" },
-    { label: "Tecnologias", href: "/#tecnologias" },
-    { label: "Sobre", href: "/#sobre" },
-    { label: "Contato", href: "/#contato" },
+    { label: "Tecnologias", href: "/tecnologias" },
+    { label: "Sobre", href: "/sobre" },
+    { label: "Contato", href: "/contato" },
   ],
 } as const;
 

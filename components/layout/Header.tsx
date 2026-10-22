@@ -9,16 +9,20 @@ import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-[#020611]/75 backdrop-blur-xl">
       <Container className="grid h-[76px] grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
         <Link
-          href="/#inicio"
+          href="/"
           className="focus-ring flex items-center gap-3 rounded-lg"
           onClick={() => setOpen(false)}
         >
@@ -37,36 +41,27 @@ export function Header() {
 
         <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Principal">
           {siteConfig.navigation.map((item) => {
-            const isRoute = item.href.startsWith("/") && !item.href.startsWith("/#");
-            const active = isRoute ? pathname.startsWith(item.href) : isHome && item.href === "/#inicio";
-            const classes = cn(
-              "focus-ring relative rounded-md text-sm text-mist transition-colors hover:text-snow",
-              active && "text-snow",
-            );
-            const underline = active ? (
-              <span className="absolute -bottom-2 left-0 h-px w-full bg-snow/80" />
-            ) : null;
-
-            if (isRoute) {
-              return (
-                <Link key={item.href} href={item.href} className={classes} onClick={() => setOpen(false)}>
-                  {item.label}
-                  {underline}
-                </Link>
-              );
-            }
-
+            const active = isActivePath(pathname, item.href);
             return (
-              <a key={item.href} href={item.href} className={classes}>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "focus-ring relative rounded-md text-sm text-mist transition-colors hover:text-snow",
+                  active && "text-snow",
+                )}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
                 {item.label}
-                {underline}
-              </a>
+                {active ? <span className="absolute -bottom-2 left-0 h-px w-full bg-snow/80" /> : null}
+              </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center justify-end gap-4">
-          <ButtonLink href="/#contato" className="hidden sm:inline-flex">
+          <ButtonLink href="/contato" className="hidden sm:inline-flex">
             Vamos Conversar
             <ArrowIcon className="h-4 w-4" />
           </ButtonLink>
@@ -112,27 +107,23 @@ export function Header() {
       >
         <Container className="flex flex-col gap-1 py-4">
           {siteConfig.navigation.map((item) => {
-            const isRoute = item.href.startsWith("/") && !item.href.startsWith("/#");
-            const classes = "focus-ring rounded-xl px-3 py-3 text-base text-ink hover:bg-white/5";
-            if (isRoute) {
-              return (
-                <Link key={item.href} href={item.href} className={classes} onClick={() => setOpen(false)}>
-                  {item.label}
-                </Link>
-              );
-            }
+            const active = isActivePath(pathname, item.href);
             return (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
-                className={classes}
+                className={cn(
+                  "focus-ring rounded-xl px-3 py-3 text-base text-ink hover:bg-white/5",
+                  active && "bg-white/5 text-snow",
+                )}
+                aria-current={active ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
-          <ButtonLink href="/#contato" className="mt-2 w-full">
+          <ButtonLink href="/contato" className="mt-2 w-full">
             Vamos Conversar
             <ArrowIcon className="h-4 w-4" />
           </ButtonLink>

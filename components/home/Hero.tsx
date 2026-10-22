@@ -22,11 +22,11 @@ export function Hero() {
             {siteConfig.heroText}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/#projetos">
+            <ButtonLink href="/projetos">
               Conheça meus projetos
               <ArrowIcon className="h-4 w-4" />
             </ButtonLink>
-            <ButtonLink href="/#contato" variant="secondary">
+            <ButtonLink href="/contato" variant="secondary">
               <ChatIcon className="h-4 w-4" />
               Entre em contato
             </ButtonLink>
