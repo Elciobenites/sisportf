@@ -23,7 +23,8 @@ export type ProjectIcon =
   | "health"
   | "report"
   | "research"
-  | "tv";
+  | "tv"
+  | "scanner";
 
 export type Project = {
   id: string;
@@ -696,6 +697,62 @@ export const projects: Project[] = [
           src: "/projects/sisdap/gallery-01.png",
           alt: "Identidade visual do SISDAP",
           placeholder: false,
+        },
+      ],
+    },
+  },
+  {
+    id: "sisscanner",
+    slug: "sisscanner",
+    nome: "SISSCANNER",
+    icone: "scanner",
+    resumo:
+      "Sistema para digitalização, leitura e classificação de documentos de frequência, com OCR, conferência de páginas, organização por servidor e período, e exportação dos arquivos confirmados.",
+    desafio:
+      "Lotes de documentos digitalizados chegam misturados. Sem leitura e classificação, separar páginas, conferir titularidade e arquivar por servidor e competência vira trabalho manual e sujeito a erro.",
+    solucao:
+      "Foi desenvolvido um sistema web com autenticação, upload de lotes em PDF, leitura por código de barras e OCR, classificação automática, conferência das páginas que não fecharam sozinhas, biblioteca dos blocos confirmados, exportação e serviço Windows para processar a fila mesmo com o navegador fechado. O cadastro de servidores, quando usado, permanece somente leitura.",
+    participacao: [
+      "Entendimento do problema",
+      "Levantamento das regras de negócio",
+      "SQL",
+      "Desenvolvimento",
+      "Validação",
+    ],
+    tecnologias: ["Python", "FastAPI", "OCR", "SQL Server", "PDF"],
+    arquitetura: [
+      { label: "Lotes digitalizados" },
+      { label: "OCR / código de barras" },
+      { label: "Classificação e conferência" },
+      { label: "Acervo de documentos" },
+      { label: "Exportação" },
+      { label: "Usuário" },
+    ],
+    resultados: {
+      qualitativos: [
+        "Organização da leitura e da classificação de documentos digitalizados em um sistema web.",
+        "Apoio à conferência das páginas pendentes e à exportação somente do que foi confirmado.",
+      ],
+      quantitativos: [],
+    },
+    imagens: {
+      capa: {
+        src: "/projects/sisscanner/login.png",
+        alt: "Tela de acesso do Scanner Inteligente, sem dados pessoais",
+        placeholder: false,
+        fit: "cover",
+      },
+      galeria: [
+        {
+          src: "/projects/sisscanner/gallery-01.png",
+          alt: "Identidade visual do Scanner Inteligente",
+          placeholder: false,
+        },
+        {
+          src: "/projects/sisscanner/gallery-02.png",
+          alt: "Tela de upload e classificação de lotes, sem nomes nem documentos reais",
+          placeholder: false,
+          fit: "cover",
         },
       ],
     },

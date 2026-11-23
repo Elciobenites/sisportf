@@ -132,6 +132,15 @@ export function TvIcon(props: IconProps) {
   );
 }
 
+export function ScannerIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <rect x="4" y="7" width="16" height="10" rx="1.6" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M7 4.8h10M7 19.2h10M8 10.5h8M8 13.5h5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </Base>
+  );
+}
+
 export function HealthIcon(props: IconProps) {
   return (
     <Base {...props}>
@@ -228,6 +237,7 @@ const projectIcons = {
   report: ReportIcon,
   research: ResearchIcon,
   tv: TvIcon,
+  scanner: ScannerIcon,
 };
 
 export function ProjectTypeIcon({

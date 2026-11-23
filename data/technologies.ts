@@ -38,7 +38,7 @@ export const technologyCategories: TechnologyCategory[] = [
   {
     id: "dev",
     title: "Desenvolvimento de Sistemas",
-    items: ["Node.js", "JavaScript", "HTML", "CSS", "Streamlit", "Flask", "APIs REST"],
+    items: ["Node.js", "JavaScript", "HTML", "CSS", "Streamlit", "Flask", "FastAPI", "APIs REST"],
   },
   {
     id: "infra",
