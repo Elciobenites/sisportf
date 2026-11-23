@@ -38,12 +38,12 @@ export const technologyCategories: TechnologyCategory[] = [
   {
     id: "dev",
     title: "Desenvolvimento de Sistemas",
-    items: ["Node.js", "Express", "JavaScript", "HTML", "CSS", "Streamlit", "Flask", "FastAPI", "APIs REST"],
+    items: ["Node.js", "Next.js", "Express", "JavaScript", "HTML", "CSS", "Streamlit", "Flask", "FastAPI", "APIs REST"],
   },
   {
     id: "infra",
     title: "Bancos & Infraestrutura",
-    items: ["SQL Server", "SQLite", "Firebird", "IIS", "Nginx", "Windows Server"],
+    items: ["SQL Server", "PostgreSQL", "SQLite", "Firebird", "IIS", "Nginx", "Windows Server"],
   },
   {
     id: "avancado",

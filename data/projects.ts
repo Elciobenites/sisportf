@@ -815,6 +815,64 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    id: "folha-intelligence",
+    slug: "folha-intelligence",
+    nome: "Folha Intelligence",
+    icone: "chart",
+    resumo:
+      "Plataforma web de inteligência em folha de pagamento, com autenticação, isolamento entre empresas, administração de usuários e papéis, e a casca visual dos módulos de análise, auditoria e relatórios.",
+    desafio:
+      "A leitura de folha, indicadores e auditoria precisa acontecer sem misturar o universo de um cliente com o de outro. Sem isolamento e sem uma plataforma própria, a consultoria fica presa a planilha e a recorte avulso.",
+    solucao:
+      "Foi construída uma plataforma web em Next.js com API FastAPI e PostgreSQL, sessão autenticada, cadastro de empresas e usuários, isolamento entre empresas e o shell dos módulos de folha, indicadores, auditoria e relatórios. A demonstração usa dados sintéticos e não entra como resultado de cliente.",
+    participacao: [
+      "Entendimento do problema",
+      "Levantamento das regras de negócio",
+      "Modelagem de dados",
+      "SQL",
+      "Desenvolvimento",
+      "Validação",
+    ],
+    tecnologias: ["Next.js", "FastAPI", "PostgreSQL", "TypeScript", "Python"],
+    arquitetura: [
+      { label: "Usuário" },
+      { label: "Interface Next.js" },
+      { label: "API FastAPI" },
+      { label: "PostgreSQL" },
+      { label: "Isolamento por empresa" },
+      { label: "Gestão" },
+    ],
+    resultados: {
+      qualitativos: [
+        "Centralização da identidade, do acesso e do isolamento entre empresas em uma plataforma web.",
+        "Casca visual dos módulos de folha, indicadores, auditoria e relatórios, sem misturar universos de clientes.",
+      ],
+      quantitativos: [],
+    },
+    imagens: {
+      capa: {
+        src: "/projects/folha-intelligence/login.png",
+        alt: "Identidade visual do Folha Intelligence, sem dados reais de folha",
+        placeholder: false,
+        fit: "cover",
+      },
+      galeria: [
+        {
+          src: "/projects/folha-intelligence/gallery-01.png",
+          alt: "Logotipo do Folha Intelligence",
+          placeholder: false,
+          fit: "contain",
+        },
+        {
+          src: "/projects/folha-intelligence/gallery-02.png",
+          alt: "Identidade do escritório analítico do Folha Intelligence, sem dados pessoais",
+          placeholder: false,
+          fit: "cover",
+        },
+      ],
+    },
+  },
 ];
 
 const featuredIds = new Set([
