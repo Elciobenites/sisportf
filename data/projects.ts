@@ -24,7 +24,8 @@ export type ProjectIcon =
   | "report"
   | "research"
   | "tv"
-  | "scanner";
+  | "scanner"
+  | "meal";
 
 export type Project = {
   id: string;
@@ -751,6 +752,63 @@ export const projects: Project[] = [
         {
           src: "/projects/sisscanner/gallery-02.png",
           alt: "Tela de upload e classificação de lotes, sem nomes nem documentos reais",
+          placeholder: false,
+          fit: "cover",
+        },
+      ],
+    },
+  },
+  {
+    id: "marmitas",
+    slug: "marmitas",
+    nome: "Marmita Fácil",
+    icone: "meal",
+    resumo:
+      "Sistema web para controle de venda de marmitas, com cadastro de locais, clientes e cardápio, registro de vendas, estoque do dia, dashboard e relatórios em PDF, também utilizável no celular.",
+    desafio:
+      "Vendas de marmitas em locais diferentes ficam espalhadas entre caderno, planilha e conversa. Sem um sistema, registrar pedido, acompanhar o estoque do dia e fechar relatório perde consistência.",
+    solucao:
+      "Foi desenvolvido um sistema web em Node.js com SQLite, autenticação por perfil, cadastro de locais, clientes e marmitas, registro e consulta de vendas, estoque do dia, dashboard e relatórios em PDF. O acesso também funciona no celular, com a opção de instalar como aplicativo.",
+    participacao: [
+      "Entendimento do problema",
+      "Levantamento das regras de negócio",
+      "Modelagem de dados",
+      "Desenvolvimento",
+      "Validação",
+    ],
+    tecnologias: ["Node.js", "Express", "SQLite", "JavaScript", "PDF"],
+    arquitetura: [
+      { label: "Usuário" },
+      { label: "Aplicação web / PWA" },
+      { label: "Cadastros e vendas" },
+      { label: "SQLite" },
+      { label: "Estoque e relatórios" },
+      { label: "Gestão" },
+    ],
+    resultados: {
+      qualitativos: [
+        "Centralização do registro de vendas de marmitas em um sistema web.",
+        "Apoio ao estoque do dia, ao dashboard e à geração de relatórios em PDF, também no celular.",
+      ],
+      quantitativos: [],
+    },
+    imagens: {
+      capa: {
+        src: "/projects/marmitas/login.png",
+        alt: "Identidade visual do Marmita Fácil, sem dados de clientes",
+        placeholder: false,
+        fit: "cover",
+      },
+      galeria: [
+        {
+          src: "/projects/marmitas/gallery-01.jpg",
+          alt: "Imagem de apresentação do sistema de venda de marmitas",
+          placeholder: false,
+          fit: "cover",
+        },
+        {
+          src: "/projects/marmitas/gallery-02.png",
+          alt: "Tela de acesso do Marmita Fácil, sem dados de clientes",
           placeholder: false,
           fit: "cover",
         },

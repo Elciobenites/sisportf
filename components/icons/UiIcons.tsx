@@ -141,6 +141,16 @@ export function ScannerIcon(props: IconProps) {
   );
 }
 
+export function MealIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M7 11h10v7.2A1.8 1.8 0 0 1 15.2 20H8.8A1.8 1.8 0 0 1 7 18.2V11Z" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M12 4.5c2.4 0 4.4 1.6 4.8 3.8H7.2C7.6 6.1 9.6 4.5 12 4.5Z" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M9 8.4V11M12 7.6V11M15 8.4V11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </Base>
+  );
+}
+
 export function HealthIcon(props: IconProps) {
   return (
     <Base {...props}>
@@ -238,6 +248,7 @@ const projectIcons = {
   research: ResearchIcon,
   tv: TvIcon,
   scanner: ScannerIcon,
+  meal: MealIcon,
 };
 
 export function ProjectTypeIcon({
