@@ -151,6 +151,17 @@ export function MealIcon(props: IconProps) {
   );
 }
 
+export function BadgeIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <rect x="7" y="6" width="10" height="14" rx="1.6" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="12" cy="11" r="2.2" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M9.2 16.2h5.6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M10 4.5h4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </Base>
+  );
+}
+
 export function HealthIcon(props: IconProps) {
   return (
     <Base {...props}>
@@ -249,6 +260,7 @@ const projectIcons = {
   tv: TvIcon,
   scanner: ScannerIcon,
   meal: MealIcon,
+  badge: BadgeIcon,
 };
 
 export function ProjectTypeIcon({

@@ -25,7 +25,8 @@ export type ProjectIcon =
   | "research"
   | "tv"
   | "scanner"
-  | "meal";
+  | "meal"
+  | "badge";
 
 export type Project = {
   id: string;
@@ -867,6 +868,57 @@ export const projects: Project[] = [
         {
           src: "/projects/folha-intelligence/gallery-02.png",
           alt: "Identidade do escritório analítico do Folha Intelligence, sem dados pessoais",
+          placeholder: false,
+          fit: "cover",
+        },
+      ],
+    },
+  },
+  {
+    id: "siscracha",
+    slug: "siscracha",
+    nome: "SISCRACHA",
+    icone: "badge",
+    resumo:
+      "Sistema web para emissão de identidade funcional em cartão PVC, com consulta do servidor, foto, pré-visualização frente e verso, mais de um modelo de crachá e impressão na impressora de cartão do computador.",
+    desafio:
+      "Emitir crachá ainda depende de montar frente e verso à mão, buscar o servidor em outro lugar e mandar para a impressora de cartão. Sem um fluxo único, conferência, foto e impressão ficam espalhadas e sujeitas a retrabalho.",
+    solucao:
+      "Foi desenvolvido um sistema web com autenticação, consulta somente leitura do cadastro de servidores, anexação de foto, pré-visualização da frente e do verso, escolha do modelo e envio para a impressora de cartão neste computador, inclusive frente e verso. Um agente local acompanha a impressão. O cadastro oficial de servidores permanece somente leitura.",
+    participacao: [
+      "Entendimento do problema",
+      "Levantamento das regras de negócio",
+      "SQL",
+      "Desenvolvimento",
+      "Validação",
+    ],
+    tecnologias: ["HTML", "JavaScript", "SQL Server", "PowerShell"],
+    arquitetura: [
+      { label: "Usuário" },
+      { label: "Aplicação web" },
+      { label: "Consulta de servidor" },
+      { label: "SQL Server" },
+      { label: "Impressão em cartão" },
+      { label: "Identidade funcional" },
+    ],
+    resultados: {
+      qualitativos: [
+        "Centralização da emissão de crachá em um sistema web, da consulta à impressão.",
+        "Apoio à conferência da frente e do verso e à impressão em cartão PVC, sem alterar o cadastro oficial de servidores.",
+      ],
+      quantitativos: [],
+    },
+    imagens: {
+      capa: {
+        src: "/projects/siscracha/login.png",
+        alt: "Tela de acesso do SISCRACHA, sem dados pessoais",
+        placeholder: false,
+        fit: "cover",
+      },
+      galeria: [
+        {
+          src: "/projects/siscracha/login.png",
+          alt: "Tela de acesso do SISCRACHA, sem dados pessoais",
           placeholder: false,
           fit: "cover",
         },
